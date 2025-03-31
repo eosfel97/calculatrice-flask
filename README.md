@@ -24,7 +24,7 @@ Une calculatrice web avancée développée avec **Python Flask**, proposant des 
   - Python (v3.7+)
 - **Frontend :**
   - HTML5 / CSS3
-  - JavaScript Vanilla
+  - JavaScript 
   - Font Awesome (icônes)
 
 ---

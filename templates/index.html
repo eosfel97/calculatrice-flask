@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Avancée</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="history-display" id="history-display"></div>
+                <div class="result-display" id="result-display">0</div>
+            </div>
+            
+            <div class="memory-buttons">
+                <button class="btn memory-btn" id="memory-add">M+</button>
+                <button class="btn memory-btn" id="memory-recall">MR</button>
+                <span class="memory-indicator" id="memory-indicator">M: 0</span>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn number-btn" data-value="7">7</button>
+                <button class="btn number-btn" data-value="8">8</button>
+                <button class="btn number-btn" data-value="9">9</button>
+                <button class="btn operation-btn" data-operation="divide">÷</button>
+                
+                <button class="btn number-btn" data-value="4">4</button>
+                <button class="btn number-btn" data-value="5">5</button>
+                <button class="btn number-btn" data-value="6">6</button>
+                <button class="btn operation-btn" data-operation="multiply">×</button>
+                
+                <button class="btn number-btn" data-value="1">1</button>
+                <button class="btn number-btn" data-value="2">2</button>
+                <button class="btn number-btn" data-value="3">3</button>
+                <button class="btn operation-btn" data-operation="subtract">-</button>
+                
+                <button class="btn number-btn" data-value="0">0</button>
+                <button class="btn" id="decimal-point">.</button>
+                <button class="btn" id="clear-btn">C</button>
+                <button class="btn operation-btn" data-operation="add">+</button>
+                
+                <button class="btn advanced-btn" data-operation="power">x^y</button>
+                <button class="btn advanced-btn" data-operation="sqrt">√x</button>
+                <button class="btn equals-btn" id="equals-btn">=</button>
+            </div>
+        </div>
+        
+        <div class="history-panel">
+            <h3><i class="fas fa-history"></i> Historique</h3>
+            <div class="history-list" id="history-list">
+                <div class="empty-history">Aucun calcul effectué</div>
+            </div>
+            <button class="btn clear-history-btn" id="clear-history-btn">
+                <i class="fas fa-trash"></i> Effacer l'historique
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
